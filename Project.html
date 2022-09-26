@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Typing Game....</title>
+      <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-image:url('https://cdn.pixabay.com/photo/2013/05/12/18/55/balance-110850__340.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+          button{
+            margin: 0 0 10px;
+            padding: 20 ;
+            color: #fff;
+            font-size: 25 px;
+          } 
+          .khl{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+          }
+          input{
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            box-sizing: border-box;
+            transition: .5s;
+            background-color: lemonchiffon;
+            color: burlywood;
+            font-weight: bold;
+          }
+          input[type="text"]{
+            background: #fff;
+            width: 350px;
+            height: 40px;
+            border: none;
+            outline: none;
+            padding: 0 25 px;
+            text-align: center;
+            color: red;
+        }
+         .time{
+            float: left;
+        }
+        .score{
+            float: right;
+        }
+        p{
+          text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+         <div class="khl">
+            <form>
+                <button>Start</button>
+                <br>
+                <P id="result"></P>
+                 <input type="text" id="INPut" placeholder="Start typing...">
+                 <br><br>
+                 <h3 class="time"  id="time">Time :: 0</h3>
+                 <h3 class="score" id="score"> Score :: 0 </h3>
+            </form>
+         </div>
+         <script>
+         var time= document.getElementById("time");
+          var score = document.getElementById("score");
+              score = 0 ;
+          var Words = ["JavaScript", "Html", "css", "variables", "Arrays" ,
+        "Operators" ,"Subtraction" , "Object" ,"Function" , "Parameter"
+         ,"Properties" ];
+               var  input = document.getElementById('input');
+               var result = document.getElementById('result');
+               function randomWord(){
+             var  item =[( Math.floor(Math.random() * (Words.length)))]; 
+                document.getElementById("result").innerHTML = Words[item] ;
+                       return Words[item] ; 
+                        }
+               INPut.addEventListener('input', function () {
+                         if (input = this.value){
+                             randomWord();
+                             return word[item+1] ;
+                             input.value='';
+                             score ++ ;
+                         }
+                        });
+               
+                 const mytime = setTimeout(myfunc , 100000);
+                      function myfunc(){
+                     alert("This game is over") ;
+               }
+             
+          </script >
+    </body>
+</html>
+    
